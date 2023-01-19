@@ -107,7 +107,7 @@ console.log( foodString );
 // the code above was my attempt before class on weds - realizing now that foodString is not technically a string
 // the code below is my 2nd attempt after learning more
 foodString = '';
-for ( let i = 0; i < favoriteFoods.length; i+= 1 ) {
+for ( let i = 0; i < favoriteFoods.length; i += 1 ) {
     if ( i === favoriteFoods.length - 1 ) {
         foodString += favoriteFoods[i];
     } else {
@@ -123,4 +123,15 @@ for ( let i = 0; i < favoriteFoods.length; i+= 1 ) {
 let combinedArray = [];
 combinedArray.push( favoriteFoods[0], favoriteFoods[1], favoriteFoods[2], favoriteFoods[3] );
 combinedArray.push( animalArray[0], animalArray[1], animalArray[2], animalArray[3] );
+console.log( combinedArray );
+
+// 2nd attempt below - trying to make it a loop instead
+// Tried to do it in one loop but realized it would only work because the 2 arrays have the same length
+combinedArray = [];
+for ( i = 0; i < favoriteFoods.length; i += 1 ) {
+    combinedArray.push( favoriteFoods[i] );
+}
+for ( i = 0; i < animalArray.length; i += 1 ) {
+    combinedArray.push( animalArray[i] );
+}
 console.log( combinedArray );

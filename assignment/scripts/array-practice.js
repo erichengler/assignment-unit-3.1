@@ -104,6 +104,16 @@ console.log( 'Foods in reverse alphabetical order are', favoriteFoods );
 //     eg "tacos and pizza and pasta". Log the string.
 let foodString = ( favoriteFoods[0] + ' and ' + favoriteFoods[1] + ' and ' + favoriteFoods[2] + ' and ' + favoriteFoods[3] );
 console.log( foodString );
+// the code above was my attempt before class on weds - realizing now that foodString is not technically a string
+// the code below is my 2nd attempt after learning more
+foodString = '';
+for ( let i = 0; i < favoriteFoods.length; i+= 1 ) {
+    if ( i === favoriteFoods.length - 1 ) {
+        foodString += favoriteFoods[i];
+    } else {
+        foodString += `${favoriteFoods[i]} and `;
+    }
+} console.log( foodString );
 
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
